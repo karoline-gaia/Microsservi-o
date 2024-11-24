@@ -17,3 +17,9 @@ func (r *InMemoryCategoryRepository) Save(category *entities.Category) error {
 
 	return nil
 }
+
+func (r *InMemoryCategoryRepository) List()([]*entities.Category, error) {
+
+	return r.db, nil
+}
+
