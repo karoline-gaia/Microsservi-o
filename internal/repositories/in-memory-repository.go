@@ -2,23 +2,23 @@ package repositories
 
 import "github.com/karoline-gaia/go-categories-mvc/internal/entities"
 
-type InMemoryCategoryRepository struct {
+type inMemoryCategoryRepository struct {
 	db []*entities.Category
 }
 
-func NewInMemoryCategoryRepository() *InMemoryCategoryRepository {
-	return &InMemoryCategoryRepository{
+func NewInMemoryCategoryRepository() *inMemoryCategoryRepository {
+	return &inMemoryCategoryRepository{
 		db: make([]*entities.Category, 0),
 	}
 }
 
-func (r *InMemoryCategoryRepository) Save(category *entities.Category) error {
+func (r *inMemoryCategoryRepository) Save(category *entities.Category) error {
 	r.db = append(r.db, category)
 
 	return nil
 }
 
-func (r *InMemoryCategoryRepository) List()([]*entities.Category, error) {
+func (r *inMemoryCategoryRepository) List()([]*entities.Category, error) {
 
 	return r.db, nil
 }

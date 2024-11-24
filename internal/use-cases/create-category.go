@@ -9,7 +9,7 @@ type createCategoryUseCase struct {
 	repository *repositories.ICategoryRepository
 }
 
-func NewCreateCategoryUseCase(repository *repositories.ICategoryRepository) *createCategoryUseCase {
+func NewCreateCategoryUseCase(repository repositories.ICategoryRepository) *createCategoryUseCase {
 	return &createCategoryUseCase{repository}
 
 }
